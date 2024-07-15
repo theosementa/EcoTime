@@ -7,22 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D9F022302C4539FA00A84881 /* EcoTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0222F2C4539FA00A84881 /* EcoTimeApp.swift */; };
-		D9F022322C4539FA00A84881 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022312C4539FA00A84881 /* ContentView.swift */; };
+		D9F022302C4539FA00A84881 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0222F2C4539FA00A84881 /* App.swift */; };
 		D9F022342C4539FB00A84881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022332C4539FB00A84881 /* Assets.xcassets */; };
 		D9F022372C4539FB00A84881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022362C4539FB00A84881 /* Preview Assets.xcassets */; };
+		D9F022412C453B2700A84881 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022402C453B2700A84881 /* HomeView.swift */; };
+		D9F022732C453F9E00A84881 /* ReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022722C453F9E00A84881 /* ReportExtension.swift */; };
+		D9F022752C453F9E00A84881 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022742C453F9E00A84881 /* TotalActivityReport.swift */; };
+		D9F022772C453F9E00A84881 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022762C453F9E00A84881 /* TotalActivityView.swift */; };
+		D9F0227C2C453F9E00A84881 /* ReportExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = D9F022702C453F9E00A84881 /* ReportExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D9F022882C45481E00A84881 /* AppDeviceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022872C45481E00A84881 /* AppDeviceActivity.swift */; };
+		D9F0228A2C454B9C00A84881 /* AppActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022892C454B9C00A84881 /* AppActivityRow.swift */; };
+		D9F0228E2C454C8100A84881 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0228D2C454C8100A84881 /* TimeInterval+Extensions.swift */; };
+		D9F022902C454CD500A84881 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0228F2C454CD500A84881 /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9F0227A2C453F9E00A84881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9F022242C4539FA00A84881 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9F0226F2C453F9E00A84881;
+			remoteInfo = ReportExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9F022562C453BA000A84881 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				D9F0227C2C453F9E00A84881 /* ReportExtension.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D9F0222C2C4539FA00A84881 /* EcoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9F0222F2C4539FA00A84881 /* EcoTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTimeApp.swift; sourceTree = "<group>"; };
-		D9F022312C4539FA00A84881 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9F0222F2C4539FA00A84881 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D9F022332C4539FB00A84881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F022362C4539FB00A84881 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9F022402C453B2700A84881 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D9F0226B2C453F8500A84881 /* EcoTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoTime.entitlements; sourceTree = "<group>"; };
+		D9F022702C453F9E00A84881 /* ReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = ReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F022722C453F9E00A84881 /* ReportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportExtension.swift; sourceTree = "<group>"; };
+		D9F022742C453F9E00A84881 /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
+		D9F022762C453F9E00A84881 /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
+		D9F022782C453F9E00A84881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F022792C453F9E00A84881 /* ReportExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReportExtension.entitlements; sourceTree = "<group>"; };
+		D9F022872C45481E00A84881 /* AppDeviceActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDeviceActivity.swift; sourceTree = "<group>"; };
+		D9F022892C454B9C00A84881 /* AppActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActivityRow.swift; sourceTree = "<group>"; };
+		D9F0228D2C454C8100A84881 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		D9F0228F2C454CD500A84881 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D9F022292C4539FA00A84881 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F0226D2C453F9E00A84881 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				D9F0222E2C4539FA00A84881 /* EcoTime */,
+				D9F022712C453F9E00A84881 /* ReportExtension */,
 				D9F0222D2C4539FA00A84881 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				D9F0222C2C4539FA00A84881 /* EcoTime.app */,
+				D9F022702C453F9E00A84881 /* ReportExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +103,10 @@
 		D9F0222E2C4539FA00A84881 /* EcoTime */ = {
 			isa = PBXGroup;
 			children = (
-				D9F0222F2C4539FA00A84881 /* EcoTimeApp.swift */,
-				D9F022312C4539FA00A84881 /* ContentView.swift */,
-				D9F022332C4539FB00A84881 /* Assets.xcassets */,
+				D9F0226B2C453F8500A84881 /* EcoTime.entitlements */,
+				D9F0222F2C4539FA00A84881 /* App.swift */,
+				D9F0223D2C453A9400A84881 /* Views */,
+				D9F0223E2C453A9C00A84881 /* Resources */,
 				D9F022352C4539FB00A84881 /* Preview Content */,
 			);
 			path = EcoTime;
@@ -67,6 +120,86 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D9F0223D2C453A9400A84881 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9F022402C453B2700A84881 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9F0223E2C453A9C00A84881 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9F0223F2C453AAB00A84881 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9F0223F2C453AAB00A84881 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D9F022332C4539FB00A84881 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D9F022712C453F9E00A84881 /* ReportExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D9F022722C453F9E00A84881 /* ReportExtension.swift */,
+				D9F022742C453F9E00A84881 /* TotalActivityReport.swift */,
+				D9F022932C454DCE00A84881 /* Views */,
+				D9F022912C454DB200A84881 /* Components */,
+				D9F022922C454DBF00A84881 /* Model */,
+				D9F0228B2C454C6C00A84881 /* Resources */,
+				D9F022782C453F9E00A84881 /* Info.plist */,
+				D9F022792C453F9E00A84881 /* ReportExtension.entitlements */,
+			);
+			path = ReportExtension;
+			sourceTree = "<group>";
+		};
+		D9F0228B2C454C6C00A84881 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9F0228C2C454C7300A84881 /* Extensions */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9F0228C2C454C7300A84881 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9F0228F2C454CD500A84881 /* Int+Extensions.swift */,
+				D9F0228D2C454C8100A84881 /* TimeInterval+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D9F022912C454DB200A84881 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D9F022892C454B9C00A84881 /* AppActivityRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D9F022922C454DBF00A84881 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9F022872C45481E00A84881 /* AppDeviceActivity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9F022932C454DCE00A84881 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9F022762C453F9E00A84881 /* TotalActivityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +210,34 @@
 				D9F022282C4539FA00A84881 /* Sources */,
 				D9F022292C4539FA00A84881 /* Frameworks */,
 				D9F0222A2C4539FA00A84881 /* Resources */,
+				D9F022562C453BA000A84881 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D9F0227B2C453F9E00A84881 /* PBXTargetDependency */,
 			);
 			name = EcoTime;
 			productName = EcoTime;
 			productReference = D9F0222C2C4539FA00A84881 /* EcoTime.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D9F0226F2C453F9E00A84881 /* ReportExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F0227D2C453F9E00A84881 /* Build configuration list for PBXNativeTarget "ReportExtension" */;
+			buildPhases = (
+				D9F0226C2C453F9E00A84881 /* Sources */,
+				D9F0226D2C453F9E00A84881 /* Frameworks */,
+				D9F0226E2C453F9E00A84881 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReportExtension;
+			productName = ReportExtension;
+			productReference = D9F022702C453F9E00A84881 /* ReportExtension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +250,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					D9F0222B2C4539FA00A84881 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					D9F0226F2C453F9E00A84881 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -116,6 +271,7 @@
 			projectRoot = "";
 			targets = (
 				D9F0222B2C4539FA00A84881 /* EcoTime */,
+				D9F0226F2C453F9E00A84881 /* ReportExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +286,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9F0226E2C453F9E00A84881 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +300,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9F022322C4539FA00A84881 /* ContentView.swift in Sources */,
-				D9F022302C4539FA00A84881 /* EcoTimeApp.swift in Sources */,
+				D9F022412C453B2700A84881 /* HomeView.swift in Sources */,
+				D9F022302C4539FA00A84881 /* App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F0226C2C453F9E00A84881 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F022772C453F9E00A84881 /* TotalActivityView.swift in Sources */,
+				D9F0228E2C454C8100A84881 /* TimeInterval+Extensions.swift in Sources */,
+				D9F0228A2C454B9C00A84881 /* AppActivityRow.swift in Sources */,
+				D9F022732C453F9E00A84881 /* ReportExtension.swift in Sources */,
+				D9F022902C454CD500A84881 /* Int+Extensions.swift in Sources */,
+				D9F022882C45481E00A84881 /* AppDeviceActivity.swift in Sources */,
+				D9F022752C453F9E00A84881 /* TotalActivityReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9F0227B2C453F9E00A84881 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9F0226F2C453F9E00A84881 /* ReportExtension */;
+			targetProxy = D9F0227A2C453F9E00A84881 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D9F022382C4539FB00A84881 /* Debug */ = {
@@ -197,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -267,8 +452,10 @@
 		D9F0223B2C4539FB00A84881 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EcoTime/EcoTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EcoTime/Preview Content\"";
@@ -278,8 +465,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,17 +474,23 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sementa.com.EcoTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D9F0223C2C4539FB00A84881 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EcoTime/EcoTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EcoTime/Preview Content\"";
@@ -307,8 +500,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +509,68 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sementa.com.EcoTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D9F0227E2C453F9E00A84881 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ReportExtension/ReportExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TMMB69WBG;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReportExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReportExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sementa.com.EcoTime.ReportExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9F0227F2C453F9E00A84881 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ReportExtension/ReportExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TMMB69WBG;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReportExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReportExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sementa.com.EcoTime.ReportExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +594,15 @@
 			buildConfigurations = (
 				D9F0223B2C4539FB00A84881 /* Debug */,
 				D9F0223C2C4539FB00A84881 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F0227D2C453F9E00A84881 /* Build configuration list for PBXNativeTarget "ReportExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F0227E2C453F9E00A84881 /* Debug */,
+				D9F0227F2C453F9E00A84881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
