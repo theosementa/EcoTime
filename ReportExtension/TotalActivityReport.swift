@@ -36,10 +36,12 @@ struct TotalActivityReport: DeviceActivityReportScene {
                 for await category in activity.categories {
                     for await application in category.applications {
                         
+                        let appName = (application.application.localizedDisplayName ?? "nil")
+                        guard !list.contains(where: { $0.displayName == appName }) else { continue }
+                        
                         let duration = application.totalActivityDuration
                         guard duration.toMin() > 0 else { continue }
                         
-                        let appName = (application.application.localizedDisplayName ?? "nil")
                         let bundle = (application.application.bundleIdentifier ?? "nil")
                         let numberOfPickups = application.numberOfPickups
                         
