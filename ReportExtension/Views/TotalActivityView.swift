@@ -15,10 +15,17 @@ struct TotalActivityView: View {
     // MARK: -
     var body: some View {
         VStack {
-            Text("Total Screen Time : \(activityReport.totalDuration.asHoursAndMinutes)")
+            Text(activityReport.totalDuration.asTimeString)
+                .font(.system(size: 48, weight: .bold, design: .rounded))
+            
             List(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
                 AppActivityRow(app: app)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
             }
+            .listStyle(.plain)
+            .scrollIndicators(.hidden)
         }
     } // End body
 } // End struct

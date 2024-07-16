@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D97C64422C4694A200758B97 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64412C4694A200758B97 /* Color+Extensions.swift */; };
+		D97C64432C4694B800758B97 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64412C4694A200758B97 /* Color+Extensions.swift */; };
+		D97C64452C4698ED00758B97 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64442C4698ED00758B97 /* Double+Extensions.swift */; };
 		D9F022302C4539FA00A84881 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0222F2C4539FA00A84881 /* App.swift */; };
 		D9F022342C4539FB00A84881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022332C4539FB00A84881 /* Assets.xcassets */; };
 		D9F022372C4539FB00A84881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022362C4539FB00A84881 /* Preview Assets.xcassets */; };
@@ -17,7 +20,6 @@
 		D9F0227C2C453F9E00A84881 /* ReportExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = D9F022702C453F9E00A84881 /* ReportExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D9F022882C45481E00A84881 /* AppDeviceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022872C45481E00A84881 /* AppDeviceActivity.swift */; };
 		D9F0228A2C454B9C00A84881 /* AppActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022892C454B9C00A84881 /* AppActivityRow.swift */; };
-		D9F0228E2C454C8100A84881 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0228D2C454C8100A84881 /* TimeInterval+Extensions.swift */; };
 		D9F022902C454CD500A84881 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0228F2C454CD500A84881 /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D97C64412C4694A200758B97 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		D97C64442C4698ED00758B97 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		D9F0222C2C4539FA00A84881 /* EcoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F0222F2C4539FA00A84881 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D9F022332C4539FB00A84881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +64,6 @@
 		D9F022792C453F9E00A84881 /* ReportExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReportExtension.entitlements; sourceTree = "<group>"; };
 		D9F022872C45481E00A84881 /* AppDeviceActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDeviceActivity.swift; sourceTree = "<group>"; };
 		D9F022892C454B9C00A84881 /* AppActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActivityRow.swift; sourceTree = "<group>"; };
-		D9F0228D2C454C8100A84881 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		D9F0228F2C454CD500A84881 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D97C64402C46949300758B97 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D97C64412C4694A200758B97 /* Color+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D9F022232C4539FA00A84881 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				D9F0223F2C453AAB00A84881 /* Assets */,
+				D97C64402C46949300758B97 /* Extension */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -171,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				D9F0228F2C454CD500A84881 /* Int+Extensions.swift */,
-				D9F0228D2C454C8100A84881 /* TimeInterval+Extensions.swift */,
+				D97C64442C4698ED00758B97 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,6 +314,7 @@
 			files = (
 				D9F022412C453B2700A84881 /* HomeView.swift in Sources */,
 				D9F022302C4539FA00A84881 /* App.swift in Sources */,
+				D97C64422C4694A200758B97 /* Color+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,9 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97C64452C4698ED00758B97 /* Double+Extensions.swift in Sources */,
 				D9F022772C453F9E00A84881 /* TotalActivityView.swift in Sources */,
-				D9F0228E2C454C8100A84881 /* TimeInterval+Extensions.swift in Sources */,
 				D9F0228A2C454B9C00A84881 /* AppActivityRow.swift in Sources */,
+				D97C64432C4694B800758B97 /* Color+Extensions.swift in Sources */,
 				D9F022732C453F9E00A84881 /* ReportExtension.swift in Sources */,
 				D9F022902C454CD500A84881 /* Int+Extensions.swift in Sources */,
 				D9F022882C45481E00A84881 /* AppDeviceActivity.swift in Sources */,

@@ -39,8 +39,6 @@ struct TotalActivityReport: DeviceActivityReportScene {
                         guard !list.contains(where: { $0.displayName == appName }) else { continue }
                         
                         let duration = application.totalActivityDuration
-                        guard duration.toMin() > 0 else { continue }
-                        
                         let bundle = (application.application.bundleIdentifier ?? "nil")
                         let numberOfPickups = application.numberOfPickups
                         
@@ -49,9 +47,11 @@ struct TotalActivityReport: DeviceActivityReportScene {
                         let app = AppDeviceActivity(
                             id: bundle,
                             displayName: appName,
-                            duration: duration.toMin(),
+                            duration: Int(duration),
+                            percentage: (duration / totalActivityDuration) * 100,
                             numberOfPickups: numberOfPickups,
-                            token: token
+                            token: token,
+                            category: category
                         )
                         list.append(app)
                     }
@@ -59,6 +59,6 @@ struct TotalActivityReport: DeviceActivityReportScene {
             }
         }
         
-        return ActivityReport(totalDuration: totalActivityDuration.toMin(), apps: list)
+        return ActivityReport(totalDuration: Int(totalActivityDuration), apps: list)
     }
 }
