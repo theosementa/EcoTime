@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ManagedSettings
 
 struct ActivityReport {
     let totalDuration: Int
@@ -17,4 +18,5 @@ struct AppDeviceActivity: Identifiable {
     var displayName: String
     var duration: Int
     var numberOfPickups: Int
+    var token: ApplicationToken
 }

@@ -35,7 +35,6 @@ struct TotalActivityReport: DeviceActivityReportScene {
             for await activity in item.activitySegments {
                 for await category in activity.categories {
                     for await application in category.applications {
-                        
                         let appName = (application.application.localizedDisplayName ?? "nil")
                         guard !list.contains(where: { $0.displayName == appName }) else { continue }
                         
@@ -45,11 +44,14 @@ struct TotalActivityReport: DeviceActivityReportScene {
                         let bundle = (application.application.bundleIdentifier ?? "nil")
                         let numberOfPickups = application.numberOfPickups
                         
+                        guard let token = application.application.token else { continue }
+                        
                         let app = AppDeviceActivity(
                             id: bundle,
                             displayName: appName,
                             duration: duration.toMin(),
-                            numberOfPickups: numberOfPickups
+                            numberOfPickups: numberOfPickups,
+                            token: token
                         )
                         list.append(app)
                     }

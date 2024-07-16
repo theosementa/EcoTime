@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FamilyControls
 
 struct AppActivityRow: View {
     
@@ -15,21 +16,10 @@ struct AppActivityRow: View {
     // MARK: -
     var body: some View {
         HStack {
+            Label(app.token).labelStyle(.iconOnly)
             Text(app.displayName)
             Spacer()
             Text(app.duration.asHoursAndMinutes)
         }
     } // End body
 } // End struct
-
-// MARK: - Preview
-#Preview {
-    AppActivityRow(
-        app: .init(
-            id: "preview123",
-            displayName: "Preview App",
-            duration: 124,
-            numberOfPickups: 5
-        )
-    )
-}
