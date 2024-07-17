@@ -7,21 +7,16 @@
 
 import SwiftUI
 import DeviceActivity
-import FamilyControls
 
 struct HomeView: View {
-    
-    @State private var context: DeviceActivityReport.Context = .init(rawValue: "Total Activity")
-    @State private var filter = DeviceActivityFilter(
-        segment: .daily(during: Calendar.current.dateInterval(of: .day, for: .now)!),
-        users: .all,
-        devices: .init([.iPhone])
-    )
+        
+    // EnvironmentObject
+    @EnvironmentObject private var deviceActivityManager: DeviceActivityManager
     
     // MARK: -
     var body: some View {
         NavigationStack {
-            DeviceActivityReport(context, filter: filter)
+            DeviceActivityReport(.dashboard, filter: deviceActivityManager.filter)
                 .navigationTitle("Home")
         }
     } // End body

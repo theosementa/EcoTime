@@ -15,6 +15,9 @@ struct ReportExtension: DeviceActivityReportExtension {
         TotalActivityReport { totalActivity in
             return TotalActivityView(activityReport: totalActivity)
         }
+        DashboardReport { totalActivity in
+            return DashboardView(activityReport: totalActivity)
+        }
         // Add more reports here...
     }
 }

@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import DeviceActivity
 
 struct StatisticsView: View {
+    
+    // EnvironmentObject
+    @EnvironmentObject private var deviceActivityManager: DeviceActivityManager
     
     // MARK: -
     var body: some View {
         NavigationStack {
-            Text("Statistics View")
+            DeviceActivityReport(.totalActivity, filter: deviceActivityManager.filter)
                 .navigationTitle("Statistics")
         }
     } // End body

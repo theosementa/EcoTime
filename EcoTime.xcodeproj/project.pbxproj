@@ -21,8 +21,14 @@
 		D93B043B2C48244F00802D2B /* BarlowSemiCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D93B04292C48244F00802D2B /* BarlowSemiCondensed-ExtraBold.ttf */; };
 		D93B043D2C48255E00802D2B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B043C2C48255E00802D2B /* Font.swift */; };
 		D93B043E2C48255E00802D2B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B043C2C48255E00802D2B /* Font.swift */; };
-		D93B04402C48272000802D2B /* CircleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B043F2C48272000802D2B /* CircleChart.swift */; };
 		D93B04422C482A6D00802D2B /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04412C482A6D00802D2B /* StatisticsView.swift */; };
+		D93B04482C482B8400802D2B /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04472C482B8400802D2B /* DeviceActivityManager.swift */; };
+		D93B04492C482B8400802D2B /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04472C482B8400802D2B /* DeviceActivityManager.swift */; };
+		D93B044B2C482CC700802D2B /* AppDeviceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F022872C45481E00A84881 /* AppDeviceActivity.swift */; };
+		D93B044D2C482EBB00802D2B /* CircleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B043F2C48272000802D2B /* CircleChart.swift */; };
+		D93B04502C48310100802D2B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B044F2C48310100802D2B /* DashboardView.swift */; };
+		D93B04522C48320000802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04512C48320000802D2B /* DeviceActivityReportContext+Extensions.swift */; };
+		D93B04532C48320E00802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04512C48320000802D2B /* DeviceActivityReportContext+Extensions.swift */; };
 		D97C64422C4694A200758B97 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64412C4694A200758B97 /* Color+Extensions.swift */; };
 		D97C64432C4694B800758B97 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64412C4694A200758B97 /* Color+Extensions.swift */; };
 		D97C64452C4698ED00758B97 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64442C4698ED00758B97 /* Double+Extensions.swift */; };
@@ -73,6 +79,9 @@
 		D93B043C2C48255E00802D2B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D93B043F2C48272000802D2B /* CircleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChart.swift; sourceTree = "<group>"; };
 		D93B04412C482A6D00802D2B /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		D93B04472C482B8400802D2B /* DeviceActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityManager.swift; sourceTree = "<group>"; };
+		D93B044F2C48310100802D2B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		D93B04512C48320000802D2B /* DeviceActivityReportContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceActivityReportContext+Extensions.swift"; sourceTree = "<group>"; };
 		D97C64412C4694A200758B97 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		D97C64442C4698ED00758B97 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		D9F0222C2C4539FA00A84881 /* EcoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +133,21 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D93B04432C482B2300802D2B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D93B04462C482B6F00802D2B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D93B04472C482B8400802D2B /* DeviceActivityManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		D97C64402C46949300758B97 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +180,7 @@
 				D9F0226B2C453F8500A84881 /* EcoTime.entitlements */,
 				D9F0222F2C4539FA00A84881 /* App.swift */,
 				D9F0223D2C453A9400A84881 /* Views */,
+				D93B04432C482B2300802D2B /* Components */,
 				D9F0223E2C453A9C00A84881 /* Resources */,
 				D9F022352C4539FB00A84881 /* Preview Content */,
 			);
@@ -184,6 +209,7 @@
 			children = (
 				D9F0223F2C453AAB00A84881 /* Assets */,
 				D97C64402C46949300758B97 /* Extension */,
+				D93B04462C482B6F00802D2B /* Managers */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -223,8 +249,9 @@
 		D9F0228C2C454C7300A84881 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D9F0228F2C454CD500A84881 /* Int+Extensions.swift */,
+				D93B04512C48320000802D2B /* DeviceActivityReportContext+Extensions.swift */,
 				D97C64442C4698ED00758B97 /* Double+Extensions.swift */,
+				D9F0228F2C454CD500A84881 /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,8 +259,8 @@
 		D9F022912C454DB200A84881 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D9F022892C454B9C00A84881 /* AppActivityRow.swift */,
 				D93B043F2C48272000802D2B /* CircleChart.swift */,
+				D9F022892C454B9C00A84881 /* AppActivityRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -250,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				D9F022762C453F9E00A84881 /* TotalActivityView.swift */,
+				D93B044F2C48310100802D2B /* DashboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -366,11 +394,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93B04532C48320E00802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */,
+				D93B044B2C482CC700802D2B /* AppDeviceActivity.swift in Sources */,
 				D93B043D2C48255E00802D2B /* Font.swift in Sources */,
 				D93B04422C482A6D00802D2B /* StatisticsView.swift in Sources */,
 				D9F022412C453B2700A84881 /* HomeView.swift in Sources */,
 				D9F022302C4539FA00A84881 /* App.swift in Sources */,
 				D97C64422C4694A200758B97 /* Color+Extensions.swift in Sources */,
+				D93B04482C482B8400802D2B /* DeviceActivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,9 +409,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D93B04402C48272000802D2B /* CircleChart.swift in Sources */,
 				D97C64452C4698ED00758B97 /* Double+Extensions.swift in Sources */,
+				D93B04502C48310100802D2B /* DashboardView.swift in Sources */,
+				D93B04522C48320000802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */,
 				D9F022772C453F9E00A84881 /* TotalActivityView.swift in Sources */,
+				D93B044D2C482EBB00802D2B /* CircleChart.swift in Sources */,
+				D93B04492C482B8400802D2B /* DeviceActivityManager.swift in Sources */,
 				D9F0228A2C454B9C00A84881 /* AppActivityRow.swift in Sources */,
 				D97C64432C4694B800758B97 /* Color+Extensions.swift in Sources */,
 				D9F022732C453F9E00A84881 /* ReportExtension.swift in Sources */,

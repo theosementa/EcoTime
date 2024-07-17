@@ -15,10 +15,6 @@ struct TotalActivityView: View {
     // MARK: -
     var body: some View {
         List {
-            CircleChart(totalDuration: activityReport.totalDuration.asTimeString)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.vertical, 32)
-            
             ForEach(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
                 AppActivityRow(app: app)
                     .listRowBackground(Color.clear)
