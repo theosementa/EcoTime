@@ -18,6 +18,9 @@ struct TotalActivityView: View {
             Text(activityReport.totalDuration.asTimeString)
                 .font(.system(size: 48, weight: .bold, design: .rounded))
             
+            Text("**\(activityReport.percentageFor24hrs)%** on a day of 24h")
+            Text("**\(activityReport.percentageFor16hrs)%** on a day of 16h")
+            
             List(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
                 AppActivityRow(app: app)
                     .listRowBackground(Color.clear)

@@ -24,6 +24,17 @@ struct AppDeviceActivity: Identifiable {
     var category: DeviceActivityData.CategoryActivity
 }
 
+extension ActivityReport {
+    var percentageFor24hrs: Int {
+        return Int((Double(totalDuration) / 86400.0) * 100.0)
+    }
+    
+    var percentageFor16hrs: Int {
+        return Int((Double(totalDuration) / 57600.0) * 100.0)
+    }
+    
+}
+
 //import ManagedSettings
 //if let encoded = try? JSONEncoder().encode(app.token) {
 //                Text(String(data: encoded, encoding: .utf8) ?? "")
