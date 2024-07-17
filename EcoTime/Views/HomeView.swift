@@ -20,8 +20,9 @@ struct HomeView: View {
     
     // MARK: -
     var body: some View {
-        VStack {
+        NavigationStack {
             DeviceActivityReport(context, filter: filter)
+                .navigationTitle("Home")
         }
     } // End body
 } // End struct

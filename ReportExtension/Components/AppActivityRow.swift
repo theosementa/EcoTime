@@ -18,7 +18,7 @@ struct AppActivityRow: View {
         HStack(spacing: 16) {
             Label(app.token)
                 .labelStyle(.iconOnly)
-                .scaleEffect(2)
+                .scaleEffect(2.1)
             VStack(spacing: 8) {
                 VStack(alignment: .leading, spacing: 0) {
                     HStack {
@@ -26,11 +26,11 @@ struct AppActivityRow: View {
                         Spacer()
                         Text(app.percentage.formatWith(num: app.percentage > 1 ? 0 : 2) + "%")
                     }
-                    .font(.system(size: 16, weight: .semibold, design: .rounded))
+                    .font(.barlowSemiBold(size: 18))
                     
                     Text(app.duration.asTimeString)
                         .foregroundStyle(Color.gray)
-                        .font(.system(size: 12, weight: .semibold, design: .rounded))
+                        .font(.barlowSemiBold(size: 14))
                 }
                 
                 Capsule()
@@ -45,7 +45,8 @@ struct AppActivityRow: View {
                     }
             }
         }
-        .padding()
+        .padding(.vertical, 14)
+        .padding(.horizontal, 20)
         .background {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(Color.Apple.backgroundComponent)

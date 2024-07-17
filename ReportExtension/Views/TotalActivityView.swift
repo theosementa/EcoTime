@@ -14,22 +14,20 @@ struct TotalActivityView: View {
     
     // MARK: -
     var body: some View {
-        VStack {
-            Text(activityReport.totalDuration.asTimeString)
-                .font(.system(size: 48, weight: .bold, design: .rounded))
+        List {
+            CircleChart(totalDuration: activityReport.totalDuration.asTimeString)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.vertical, 32)
             
-            Text("**\(activityReport.percentageFor24hrs)%** on a day of 24h")
-            Text("**\(activityReport.percentageFor16hrs)%** on a day of 16h")
-            
-            List(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
+            ForEach(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
                 AppActivityRow(app: app)
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                     .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
             }
-            .listStyle(.plain)
-            .scrollIndicators(.hidden)
         }
+        .listStyle(.plain)
+        .scrollIndicators(.hidden)
     } // End body
 } // End struct
 

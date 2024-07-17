@@ -43,6 +43,10 @@ extension Color {
         })
     }
     
+    public static var mainPurple: Color {
+        return Color(hex: "AA36EF")
+    }
+    
 }
 
 extension Color {

@@ -14,14 +14,17 @@ struct EcoTimeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .task {
-                    do {
-                        try await center.requestAuthorization(for: .individual)
-                    } catch {
-                        print("Error: \(error)")
-                    }
+            TabView {
+                HomeView()
+                StatisticsView()
+            } // End TabView
+            .task {
+                do {
+                    try await center.requestAuthorization(for: .individual)
+                } catch {
+                    print("Error: \(error)")
                 }
+            }
         }
-    }
+    } // End body
 }
