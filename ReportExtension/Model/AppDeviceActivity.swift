@@ -22,6 +22,10 @@ struct AppDeviceActivity: Identifiable, Hashable {
     var numberOfPickups: Int
     var token: ApplicationToken
     var category: DeviceActivityData.CategoryActivity
+    
+    var percentageForCategory: Double {
+        return Double(duration) * 100 / (Double(category.totalActivityDuration))
+    }
 }
 
 struct CategoryWithApps: Identifiable {
@@ -29,6 +33,14 @@ struct CategoryWithApps: Identifiable {
     let category: DeviceActivityData.CategoryActivity
     let apps: [AppDeviceActivity]
     let percentage: Double
+    
+    var name: String {
+        return self.category.category.localizedDisplayName ?? ""
+    }
+    
+    var token: ActivityCategoryToken? {
+        return self.category.category.token
+    }
     
     var totalDuration: Int {
         apps.reduce(0) { $0 + $1.duration }

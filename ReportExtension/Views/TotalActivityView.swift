@@ -17,31 +17,40 @@ struct TotalActivityView: View {
     
     // MARK: -
     var body: some View {
-        List {
-            HStack {
-                Spacer()
-                Picker("", selection: $viewModel.statSelected) {
-                    Text("Apps").tag(Stats.apps)
-                    Text("Categories").tag(Stats.categories)
+        NavigationStack {
+            List {
+                HStack {
+                    Spacer()
+                    Picker("", selection: $viewModel.statSelected) {
+                        Text("Apps").tag(Stats.apps)
+                        Text("Categories").tag(Stats.categories)
+                    }
+                    .labelsHidden()
                 }
-                .labelsHidden()
-            }
-            
-            if viewModel.statSelected == .apps {
-                ForEach(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
-                    AppActivityRow(app: app)
+                .listRowSeparator(.hidden)
+                
+                if viewModel.statSelected == .apps {
+                    ForEach(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
+                        AppActivityRow(app: app)
+                            .listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
+                            .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
+                    }
+                } else {
+                    ForEach(activityReport.appsByCategories) { categoryWithApps in
+                        ZStack {
+                            NavigationLink(destination: CategoryDetailView(category: categoryWithApps)) {
+                                EmptyView()
+                            }
+                            CategoryRow(category: categoryWithApps)
+                        }
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                         .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
-                }
-            } else {
-                ForEach(activityReport.appsByCategories) { categoryWithApps in
-                    CategoryRow(category: categoryWithApps)
-                        .listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
+                    }
                 }
             }
+            .navigationTitle("Statistics")
         }
         .listStyle(.plain)
         .scrollIndicators(.hidden)

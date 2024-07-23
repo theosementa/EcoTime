@@ -15,10 +15,7 @@ struct StatisticsView: View {
     
     // MARK: -
     var body: some View {
-        NavigationStack {
-            DeviceActivityReport(.totalActivity, filter: deviceActivityManager.filter)
-                .navigationTitle("Statistics")
-        }
+        DeviceActivityReport(.totalActivity, filter: deviceActivityManager.filter)
     } // End body
 } // End struct
 

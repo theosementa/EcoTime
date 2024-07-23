@@ -1,20 +1,20 @@
 //
-//  TotalActivityReport.swift
+//  DashboardReport.swift
 //  ReportExtension
 //
-//  Created by KaayZenn on 15/07/2024.
+//  Created by KaayZenn on 23/07/2024.
 //
 
 import DeviceActivity
 import SwiftUI
 
-struct TotalActivityReport: DeviceActivityReportScene {
+struct DashboardReport: DeviceActivityReportScene {
     
     // Define which context your scene will represent.
-    let context: DeviceActivityReport.Context = .totalActivity
+    let context: DeviceActivityReport.Context = .dashboard
     
     // Define the custom configuration and the resulting view for this report.
-    let content: (ActivityReport) -> TotalActivityView
+    let content: (ActivityReport) -> DashboardView
     
     func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> ActivityReport {
         // Reformat the data into a configuration that can be used to create

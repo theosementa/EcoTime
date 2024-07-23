@@ -15,7 +15,7 @@ struct CategoryRow: View {
     // MARK: -
     var body: some View {
         HStack(spacing: 16) {
-            if let token = category.category.category.token {
+            if let token = category.token {
                 Label(token)
                     .labelStyle(.iconOnly)
                     .scaleEffect(1.4)
@@ -23,7 +23,7 @@ struct CategoryRow: View {
             VStack(spacing: 8) {
                 VStack(alignment: .leading, spacing: 0) {
                     HStack {
-                        Text(category.category.category.localizedDisplayName ?? "")
+                        Text(category.name)
                         Spacer()
                         Text(category.percentage.formatWith(num: category.percentage > 1 ? 0 : 2) + "%")
                     }

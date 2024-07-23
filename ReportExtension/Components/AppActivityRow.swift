@@ -12,6 +12,7 @@ struct AppActivityRow: View {
     
     // Builder
     var app: AppDeviceActivity
+    var forCategory: Bool? = false
     
     // MARK: -
     var body: some View {
@@ -24,7 +25,11 @@ struct AppActivityRow: View {
                     HStack {
                         Text(app.displayName)
                         Spacer()
-                        Text(app.percentage.formatWith(num: app.percentage > 1 ? 0 : 2) + "%")
+                        if let forCategory, forCategory {
+                            Text(app.percentageForCategory.formatWith(num: app.percentage > 1 ? 0 : 2) + "%")
+                        } else {
+                            Text(app.percentage.formatWith(num: app.percentage > 1 ? 0 : 2) + "%")
+                        }
                     }
                     .font(.barlowSemiBold(size: 18))
                     
@@ -40,7 +45,7 @@ struct AppActivityRow: View {
                         GeometryReader { proxy in
                             Capsule()
                                 .fill(Color.blue)
-                                .frame(width: proxy.size.width * (app.percentage / 100))
+                                .frame(width: proxy.size.width * ((forCategory == true ? app.percentageForCategory : app.percentage) / 100))
                         }
                     }
             }

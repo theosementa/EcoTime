@@ -35,6 +35,8 @@
 		D97C64452C4698ED00758B97 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64442C4698ED00758B97 /* Double+Extensions.swift */; };
 		D9A097DE2C502B5000145666 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A097DD2C502B5000145666 /* CategoryRow.swift */; };
 		D9A097E02C502CE300145666 /* TotalActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A097DF2C502CE300145666 /* TotalActivityViewModel.swift */; };
+		D9A097E22C502F4F00145666 /* DashboardReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A097E12C502F4F00145666 /* DashboardReport.swift */; };
+		D9A097E52C50319C00145666 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A097E42C50319C00145666 /* CategoryDetailView.swift */; };
 		D9F022302C4539FA00A84881 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0222F2C4539FA00A84881 /* App.swift */; };
 		D9F022342C4539FB00A84881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022332C4539FB00A84881 /* Assets.xcassets */; };
 		D9F022372C4539FB00A84881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022362C4539FB00A84881 /* Preview Assets.xcassets */; };
@@ -90,6 +92,8 @@
 		D97C64442C4698ED00758B97 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		D9A097DD2C502B5000145666 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		D9A097DF2C502CE300145666 /* TotalActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityViewModel.swift; sourceTree = "<group>"; };
+		D9A097E12C502F4F00145666 /* DashboardReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardReport.swift; sourceTree = "<group>"; };
+		D9A097E42C50319C00145666 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
 		D9F0222C2C4539FA00A84881 /* EcoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F0222F2C4539FA00A84881 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D9F022332C4539FB00A84881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +164,14 @@
 				D97C64412C4694A200758B97 /* Color+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D9A097E32C502FB500145666 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9A097DF2C502CE300145666 /* TotalActivityViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D9F022232C4539FA00A84881 = {
@@ -233,10 +245,11 @@
 			children = (
 				D9F022722C453F9E00A84881 /* ReportExtension.swift */,
 				D9F022742C453F9E00A84881 /* TotalActivityReport.swift */,
-				D9A097DF2C502CE300145666 /* TotalActivityViewModel.swift */,
+				D9A097E12C502F4F00145666 /* DashboardReport.swift */,
 				D9F022932C454DCE00A84881 /* Views */,
 				D9F022912C454DB200A84881 /* Components */,
 				D9F022922C454DBF00A84881 /* Model */,
+				D9A097E32C502FB500145666 /* ViewModel */,
 				D9F0228B2C454C6C00A84881 /* Resources */,
 				D9F022782C453F9E00A84881 /* Info.plist */,
 				D9F022792C453F9E00A84881 /* ReportExtension.entitlements */,
@@ -287,6 +300,7 @@
 			children = (
 				D9F022762C453F9E00A84881 /* TotalActivityView.swift */,
 				D93B044F2C48310100802D2B /* DashboardView.swift */,
+				D9A097E42C50319C00145666 /* CategoryDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,10 +432,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A097E22C502F4F00145666 /* DashboardReport.swift in Sources */,
 				D97C64452C4698ED00758B97 /* Double+Extensions.swift in Sources */,
 				D93B04502C48310100802D2B /* DashboardView.swift in Sources */,
 				D93B04522C48320000802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */,
 				D9F022772C453F9E00A84881 /* TotalActivityView.swift in Sources */,
+				D9A097E52C50319C00145666 /* CategoryDetailView.swift in Sources */,
 				D9A097E02C502CE300145666 /* TotalActivityViewModel.swift in Sources */,
 				D93B044D2C482EBB00802D2B /* CircleChart.swift in Sources */,
 				D93B04492C482B8400802D2B /* DeviceActivityManager.swift in Sources */,
