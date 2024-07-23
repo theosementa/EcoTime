@@ -12,14 +12,35 @@ struct TotalActivityView: View {
     // Builder
     var activityReport: ActivityReport
     
+    // ViewModel
+    @StateObject private var viewModel: TotalActivityViewModel = .init()
+    
     // MARK: -
     var body: some View {
         List {
-            ForEach(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
-                AppActivityRow(app: app)
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
-                    .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
+            HStack {
+                Spacer()
+                Picker("", selection: $viewModel.statSelected) {
+                    Text("Apps").tag(Stats.apps)
+                    Text("Categories").tag(Stats.categories)
+                }
+                .labelsHidden()
+            }
+            
+            if viewModel.statSelected == .apps {
+                ForEach(activityReport.apps.sorted { $0.duration > $1.duration }) { app in
+                    AppActivityRow(app: app)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
+                }
+            } else {
+                ForEach(activityReport.appsByCategories) { categoryWithApps in
+                    CategoryRow(category: categoryWithApps)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
+                }
             }
         }
         .listStyle(.plain)

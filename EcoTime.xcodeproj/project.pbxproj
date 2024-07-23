@@ -29,9 +29,12 @@
 		D93B04502C48310100802D2B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B044F2C48310100802D2B /* DashboardView.swift */; };
 		D93B04522C48320000802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04512C48320000802D2B /* DeviceActivityReportContext+Extensions.swift */; };
 		D93B04532C48320E00802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04512C48320000802D2B /* DeviceActivityReportContext+Extensions.swift */; };
+		D93B04552C48365500802D2B /* StatisticsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B04542C48365500802D2B /* StatisticsRow.swift */; };
 		D97C64422C4694A200758B97 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64412C4694A200758B97 /* Color+Extensions.swift */; };
 		D97C64432C4694B800758B97 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64412C4694A200758B97 /* Color+Extensions.swift */; };
 		D97C64452C4698ED00758B97 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C64442C4698ED00758B97 /* Double+Extensions.swift */; };
+		D9A097DE2C502B5000145666 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A097DD2C502B5000145666 /* CategoryRow.swift */; };
+		D9A097E02C502CE300145666 /* TotalActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A097DF2C502CE300145666 /* TotalActivityViewModel.swift */; };
 		D9F022302C4539FA00A84881 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0222F2C4539FA00A84881 /* App.swift */; };
 		D9F022342C4539FB00A84881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022332C4539FB00A84881 /* Assets.xcassets */; };
 		D9F022372C4539FB00A84881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F022362C4539FB00A84881 /* Preview Assets.xcassets */; };
@@ -82,8 +85,11 @@
 		D93B04472C482B8400802D2B /* DeviceActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityManager.swift; sourceTree = "<group>"; };
 		D93B044F2C48310100802D2B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		D93B04512C48320000802D2B /* DeviceActivityReportContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceActivityReportContext+Extensions.swift"; sourceTree = "<group>"; };
+		D93B04542C48365500802D2B /* StatisticsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRow.swift; sourceTree = "<group>"; };
 		D97C64412C4694A200758B97 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		D97C64442C4698ED00758B97 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		D9A097DD2C502B5000145666 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		D9A097DF2C502CE300145666 /* TotalActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityViewModel.swift; sourceTree = "<group>"; };
 		D9F0222C2C4539FA00A84881 /* EcoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F0222F2C4539FA00A84881 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D9F022332C4539FB00A84881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 			children = (
 				D9F022722C453F9E00A84881 /* ReportExtension.swift */,
 				D9F022742C453F9E00A84881 /* TotalActivityReport.swift */,
+				D9A097DF2C502CE300145666 /* TotalActivityViewModel.swift */,
 				D9F022932C454DCE00A84881 /* Views */,
 				D9F022912C454DB200A84881 /* Components */,
 				D9F022922C454DBF00A84881 /* Model */,
@@ -259,8 +266,10 @@
 		D9F022912C454DB200A84881 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D93B043F2C48272000802D2B /* CircleChart.swift */,
 				D9F022892C454B9C00A84881 /* AppActivityRow.swift */,
+				D9A097DD2C502B5000145666 /* CategoryRow.swift */,
+				D93B043F2C48272000802D2B /* CircleChart.swift */,
+				D93B04542C48365500802D2B /* StatisticsRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -413,11 +422,14 @@
 				D93B04502C48310100802D2B /* DashboardView.swift in Sources */,
 				D93B04522C48320000802D2B /* DeviceActivityReportContext+Extensions.swift in Sources */,
 				D9F022772C453F9E00A84881 /* TotalActivityView.swift in Sources */,
+				D9A097E02C502CE300145666 /* TotalActivityViewModel.swift in Sources */,
 				D93B044D2C482EBB00802D2B /* CircleChart.swift in Sources */,
 				D93B04492C482B8400802D2B /* DeviceActivityManager.swift in Sources */,
 				D9F0228A2C454B9C00A84881 /* AppActivityRow.swift in Sources */,
+				D9A097DE2C502B5000145666 /* CategoryRow.swift in Sources */,
 				D97C64432C4694B800758B97 /* Color+Extensions.swift in Sources */,
 				D9F022732C453F9E00A84881 /* ReportExtension.swift in Sources */,
+				D93B04552C48365500802D2B /* StatisticsRow.swift in Sources */,
 				D93B043E2C48255E00802D2B /* Font.swift in Sources */,
 				D9F022902C454CD500A84881 /* Int+Extensions.swift in Sources */,
 				D9F022882C45481E00A84881 /* AppDeviceActivity.swift in Sources */,
@@ -568,6 +580,8 @@
 				DEVELOPMENT_TEAM = 8TMMB69WBG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EcoTime;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -586,7 +600,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -603,6 +617,8 @@
 				DEVELOPMENT_TEAM = 8TMMB69WBG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EcoTime;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -621,7 +637,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -638,7 +654,7 @@
 				INFOPLIST_FILE = ReportExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ReportExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -667,7 +683,7 @@
 				INFOPLIST_FILE = ReportExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ReportExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
