@@ -298,8 +298,8 @@
 		D9F022932C454DCE00A84881 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D9F022762C453F9E00A84881 /* TotalActivityView.swift */,
 				D93B044F2C48310100802D2B /* DashboardView.swift */,
+				D9F022762C453F9E00A84881 /* TotalActivityView.swift */,
 				D9A097E42C50319C00145666 /* CategoryDetailView.swift */,
 			);
 			path = Views;

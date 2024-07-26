@@ -70,6 +70,10 @@ extension ActivityReport {
         return apps.sorted { $0.duration > $1.duration }.first
     }
     
+    var categoryMostUsed: CategoryWithApps? {
+        return appsByCategories.sorted { $0.totalDuration > $1.totalDuration }.first
+    }
+    
     var percentageFor24hrs: Int {
         return Int((Double(totalDuration) / 86400.0) * 100.0)
     }

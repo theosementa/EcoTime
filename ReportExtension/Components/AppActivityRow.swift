@@ -33,7 +33,7 @@ struct AppActivityRow: View {
                     }
                     .font(.barlowSemiBold(size: 18))
                     
-                    Text(app.duration.asTimeString)
+                    Text(app.duration.convertToTime(isShort: false))
                         .foregroundStyle(Color.gray)
                         .font(.barlowSemiBold(size: 14))
                 }

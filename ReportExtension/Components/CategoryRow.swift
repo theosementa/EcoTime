@@ -29,7 +29,7 @@ struct CategoryRow: View {
                     }
                     .font(.barlowSemiBold(size: 18))
                     
-                    Text(category.totalDuration.asTimeString)
+                    Text(category.totalDuration.convertToTime(isShort: false))
                         .foregroundStyle(Color.gray)
                         .font(.barlowSemiBold(size: 14))
                 }

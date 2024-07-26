@@ -14,11 +14,18 @@ struct CategoryDetailView: View {
     
     // MARK: -
     var body: some View {
-        List(category.apps) { app in
-            AppActivityRow(app: app, forCategory: true)
-                .listRowBackground(Color.clear)
+        List {
+            Text("Total time : " + category.totalDuration.convertToTime(isShort: false))
+                .font(.barlowBold(size: 22))
+                .frame(maxWidth: .infinity, alignment: .trailing)
                 .listRowSeparator(.hidden)
-                .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
+            
+            ForEach(category.apps) { app in
+                AppActivityRow(app: app, forCategory: true)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(.init(top: 6, leading: 16, bottom: 6, trailing: 16))
+            }
         }
         .listStyle(.plain)
         .scrollIndicators(.hidden)

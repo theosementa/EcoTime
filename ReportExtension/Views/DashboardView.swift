@@ -16,7 +16,7 @@ struct DashboardView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 32) {
-                CircleChart(totalDuration: activityReport.totalDuration.asTimeString)
+                CircleChart(totalDuration: activityReport.totalDuration.convertToTime())
                 
                 if let appMostUsed = activityReport.appMostUsed {
                     VStack(spacing: 12) {
@@ -24,6 +24,15 @@ struct DashboardView: View {
                             .font(.barlowSemiBold(size: 24))
                             .frame(maxWidth: .infinity, alignment: .leading)
                         AppActivityRow(app: appMostUsed)
+                    }
+                }
+                
+                if let categoryMostUsed = activityReport.categoryMostUsed {
+                    VStack(spacing: 12) {
+                        Text("Category most used")
+                            .font(.barlowSemiBold(size: 24))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        CategoryRow(category: categoryMostUsed)
                     }
                 }
                 
